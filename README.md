@@ -1,11 +1,11 @@
 # preparation-70-483
 Examples for Microsoft 70-483 exam preparation
 
-All themes that should be covered according to official Microsoft exam specification:
+All themes that should be covered according to official Microsoft exam specification (covered themes will be maked with ✅):
 
 1. Manage Program Flow (25-30%)   
   1.1. Implement multithreading and asynchronous processing.    
-    Use the Task Parallel library, including theParallel.For method, PLINQ, Tasks;create continuation tasks;
+    Use the Task Parallel library, including the Parallel.For method, PLINQ, Tasks;create continuation tasks;
     spawn threads by using ThreadPool; unblock the UI; use async and await keywords; manage data by using
     concurrent collections   
   1.2. Manage multithreading    
