@@ -14,9 +14,10 @@ namespace Threading
                 .WithExample(new ParallelInvokeBigAmountOfActionsExample())
                 .WithExample(new ParallelInvokeConfigurationExample())
                 .WithExample(new ParallelForExample())
-                .WithExample(new ParallelForEachExample(), true);
+                .WithExample(new ParallelForEachExample())
+                .WithExample(new ParallelForManageStateExample());
 
-            exampleSet.Run();
+            exampleSet.RunLast();
 
             Console.ReadLine();
         }

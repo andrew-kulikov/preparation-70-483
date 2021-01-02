@@ -21,11 +21,16 @@ namespace Common
             return this;
         }
 
-        public void Run()
+        public void RunLast()
+        {
+            var lastExample = _exampleConfigs.Last().Example;
+            Run(new List<Example> {lastExample});
+        }
+
+        private static void Run(ICollection<Example> examples)
         {
             Console.WriteLine(new string('=', 40));
 
-            var examples = _exampleConfigs.Where(config => config.Run).Select(config => config.Example);
             foreach (var example in examples)
             {
                 Console.WriteLine($"\n{example}\n");
@@ -36,6 +41,15 @@ namespace Common
             Console.WriteLine();
             Console.WriteLine(new string('=', 40));
             Console.WriteLine();
+        }
+
+        public void Run()
+        {
+            var examples = _exampleConfigs.Where(config => config.Run)
+                .Select(config => config.Example)
+                .ToList();
+
+            Run(examples);
         }
     }
 
