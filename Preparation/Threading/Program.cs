@@ -11,7 +11,8 @@ namespace Threading
             var exampleSet = new ExampleSet()
                 .WithExample(new ParallelInvokeOneActionExample())
                 .WithExample(new ParallelInvokeManyActionsExample())
-                .WithExample(new ParallelInvokeBigAmountOfActionsExample(), true);
+                .WithExample(new ParallelInvokeBigAmountOfActionsExample())
+                .WithExample(new ParallelInvokeConfigurationExample(), true);
 
             exampleSet.Run();
 

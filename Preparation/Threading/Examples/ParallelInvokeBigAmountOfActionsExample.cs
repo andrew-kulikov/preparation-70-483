@@ -12,7 +12,8 @@ namespace Threading.Examples
     /// </summary>
     public class ParallelInvokeBigAmountOfActionsExample : Example
     {
-        public ParallelInvokeBigAmountOfActionsExample() : base("Parallel.Invoke with very big amount of actions", "1.1")
+        public ParallelInvokeBigAmountOfActionsExample() : base("Parallel.Invoke with very big amount of actions",
+            "1.1")
         {
         }
 
