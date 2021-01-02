@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
@@ -11,9 +9,6 @@ namespace Threading.Examples
 {
     public class ParallelForManageLocalStatePerformanceExample : Example
     {
-        private const int Limit = 1_000_000_000;
-        private long _total;
-
         public ParallelForManageLocalStatePerformanceExample() : base(
             "Parallel.For performance comparison vs single thread by calculating sum", "1.1")
         {
