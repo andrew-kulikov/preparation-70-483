@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Running;
 using Common;
 
 namespace Threading.Examples
@@ -19,48 +21,39 @@ namespace Threading.Examples
 
         public override void Execute()
         {
-            Measure(CalculateWithParallel);
-            Measure(CalculateWithLoop);
-            Measure(CalculateWithEnumerable);
+            BenchmarkRunner.Run<LoopsBenchmark>();
         }
+    }
 
-        private void CalculateWithParallel()
+    public class LoopsBenchmark
+    {
+        private long _total;
+
+        [Params(0L, 100, 1000, 100_000, 10_000_000, 1_000_000_000)]
+        public int N;
+
+        [Benchmark]
+        public long CalculateWithParallel()
         {
-            var result = Parallel.For(0, Limit, () => 0L, CalculateSum, LocalFinally);
+            Parallel.For(0, N, () => 0L, CalculateSum, result => Interlocked.Add(ref _total, result));
 
-            Console.WriteLine($"Calculated total with parallel: {_total}");
+            return _total;
         }
 
-        private void CalculateWithLoop()
+        [Benchmark]
+        public long CalculateWithLoop()
         {
             var result = 0L;
 
-            for (long i = 0; i < Limit; i++) result += i;
+            for (long i = 0; i < N; i++) result += i;
 
-            Console.WriteLine($"Calculated total with loop: {result}");
+            return result;
         }
 
-        private void CalculateWithEnumerable()
+        [Benchmark]
+        public long CalculateWithEnumerable()
         {
-            var result = Enumerable.Range(0, Limit).Sum(i => (long)i);
-
-            Console.WriteLine($"Calculated total with enumerable: {result}");
-        }
-
-        private void Measure(Action action)
-        {
-            var sw = new Stopwatch();
-
-            sw.Start();
-            action.Invoke();
-            sw.Stop();
-
-            Console.WriteLine($"Elapsed time: {sw.Elapsed}");
-        }
-
-        private void LocalFinally(long result)
-        {
-            Interlocked.Add(ref _total, result);
+            return Enumerable.Range(0, N).Sum(i => (long) i);
         }
 
         private long CalculateSum(int i, ParallelLoopState state, long subtotal)
