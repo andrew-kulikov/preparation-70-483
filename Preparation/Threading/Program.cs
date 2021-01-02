@@ -18,6 +18,7 @@ namespace Threading
                 .WithExample(new ParallelForManageStateExample())
                 .WithExample(new ParallelForManageLocalStateExample())
                 .WithExample(new ParallelForManageLocalStatePerformanceExample())
+                .WithExample(new EnumerableParallelExample())
                 ;
 
             exampleSet.RunLast();

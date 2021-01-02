@@ -6,6 +6,9 @@ using Common;
 
 namespace Threading.Examples
 {
+    /// <summary>
+    ///     Note: we can also use custom partitioner to speed up loop iteration for simple loop bodies
+    /// </summary>
     public class ParallelForEachExample : Example
     {
         public ParallelForEachExample() : base("Parallel.Foreach simple example", "1.1")
