@@ -22,6 +22,7 @@ namespace Threading.Examples
             {
                 var result = Enumerable.Range(0, 10)
                     .AsParallel()
+                    .AsOrdered()
                     .Select(Compute)
                     .ToList();
 
@@ -30,6 +31,11 @@ namespace Threading.Examples
             catch (AggregateException e)
             {
                 Console.WriteLine($"Thrown exceptions: {e.InnerExceptions.Count}");
+
+                foreach (var (exception, i) in e.InnerExceptions.Select((ex, i) => (ex, i)))
+                {
+                    Console.WriteLine($"Exception #{i}: {exception.Message}");
+                }
             }
         }
 
@@ -40,7 +46,7 @@ namespace Threading.Examples
             var result = 0L;
             for (var j = 0; j <= i; j++)
             {
-                if (j == 4) throw new Exception("asdasd");
+                if (j == 4) throw new Exception($"asdasd {i}");
                 result += j;
             }
 
