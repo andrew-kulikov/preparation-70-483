@@ -15,7 +15,9 @@ namespace Threading
                 .WithExample(new ParallelInvokeConfigurationExample())
                 .WithExample(new ParallelForExample())
                 .WithExample(new ParallelForEachExample())
-                .WithExample(new ParallelForManageStateExample());
+                .WithExample(new ParallelForManageStateExample())
+                .WithExample(new ParallelForManageLocalStateExample())
+                ;
 
             exampleSet.RunLast();
 

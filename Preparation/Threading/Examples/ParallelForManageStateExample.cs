@@ -5,6 +5,10 @@ using Common;
 
 namespace Threading.Examples
 {
+    /// <summary>
+    ///     Break can be called multiple times from different threads.
+    ///     Stop is similar to Break, but does not set LowestBreakIteration
+    /// </summary>
     public class ParallelForManageStateExample : Example
     {
         public ParallelForManageStateExample() : base("Parallel.For with state management example", "1.1")
@@ -23,6 +27,7 @@ namespace Threading.Examples
         {
             Console.WriteLine($"{i} from thread {Thread.CurrentThread.ManagedThreadId}");
             state.Break();
+            //state.Stop();
         }
     }
 }
