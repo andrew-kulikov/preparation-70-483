@@ -2,12 +2,17 @@
 
 namespace Common
 {
-    public abstract class AsyncExample : ExampleBase
+    public abstract class AsyncExample : Example
     {
         protected AsyncExample(string name, string module) : base(name, module)
         {
         }
 
-        public abstract Task Execute();
+        public override void Execute()
+        {
+            ExecuteAsync().GetAwaiter().GetResult();
+        }
+
+        public abstract Task ExecuteAsync();
     }
 }

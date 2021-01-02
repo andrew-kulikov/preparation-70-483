@@ -1,4 +1,6 @@
 ﻿using System;
+using Common;
+using Threading.Examples;
 
 namespace Threading
 {
@@ -6,7 +8,13 @@ namespace Threading
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var exampleSet = new ExampleSet()
+                .WithExample(new ParallelInvokeOneActionExample())
+                .WithExample(new ParallelInvokeManyActionsExample());
+
+            exampleSet.Run();
+
+            Console.ReadLine();
         }
     }
 }
