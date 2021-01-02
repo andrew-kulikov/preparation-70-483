@@ -6,6 +6,9 @@ using Common;
 
 namespace Threading.Examples
 {
+    /// <summary>
+    ///     All actions run in the different threads. First action still runs in the main thread
+    /// </summary>
     public class ParallelInvokeManyActionsExample : Example
     {
         public ParallelInvokeManyActionsExample() : base("Parallel.Invoke with multiple actions", "1.1")

@@ -5,6 +5,9 @@ using Common;
 
 namespace Threading.Examples
 {
+    /// <summary>
+    ///     First action always runs on the main thread
+    /// </summary>
     public class ParallelInvokeOneActionExample : Example
     {
         public ParallelInvokeOneActionExample() : base("Parallel.Invoke one action", "1.1")
