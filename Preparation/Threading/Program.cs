@@ -28,6 +28,7 @@ namespace Threading
                 .WithExample(new ThreadLocalAndStaticExample())
                 .WithExample(new ThreadPoolExample())
                 .WithExample(new AsyncExceptionExample())
+                .WithExample(new BlockingCollectionExample())
                 ;
 
             exampleSet.RunLast();
