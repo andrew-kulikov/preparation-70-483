@@ -7,8 +7,8 @@ using Common;
 namespace Threading.Examples
 {
     /// <summary>
-    ///     Amount of items in collection cannot be greater than value provided.
-    ///     If someone wants to write it will block until someone read data
+    ///     Logic differs based on underlying collection (FIFO - queue, FILO - stack, Random Access - bag).
+    ///     BlockingCollection is a decorator for them
     /// </summary>
     public class BlockingStackExample : Example
     {
@@ -39,9 +39,7 @@ namespace Threading.Examples
             {
                 while (!_data.IsCompleted)
                     if (_data.TryTake(out var value))
-                    {
                         Console.WriteLine($"Reading {value}.");
-                    }
             });
 
             Console.ReadLine();
