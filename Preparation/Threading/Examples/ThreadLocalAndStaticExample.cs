@@ -33,8 +33,22 @@ namespace Threading.Examples
             Print($"Static: {_static}");
             Print($"Local: {_local}");
 
+            PrintThreadInfo();
+
             Thread.Sleep(1000);
             Print("Stopping...");
+        }
+
+        private void PrintThreadInfo()
+        {
+            Print($"Context: {Thread.CurrentThread.ExecutionContext}");
+            Print($"Name: {Thread.CurrentThread.Name}");
+            Print($"Id: {Thread.CurrentThread.ManagedThreadId}");
+            Print($"Priority: {Thread.CurrentThread.Priority}");
+            Print($"IsThreadPoolThread: {Thread.CurrentThread.IsThreadPoolThread}");
+            Print($"CurrentCulture: {Thread.CurrentThread.CurrentCulture}");
+            Print($"CurrentUICulture: {Thread.CurrentThread.CurrentUICulture}");
+
         }
 
         private void Print(string message)
