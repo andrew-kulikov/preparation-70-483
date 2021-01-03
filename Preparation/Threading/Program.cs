@@ -22,6 +22,7 @@ namespace Threading
                 .WithExample(new EnumerableParallelExceptionExample())
                 .WithExample(new TasksExample())
                 .WithExample(new TasksContinuationExample())
+                .WithExample(new TaskChildExample())
                 ;
 
             exampleSet.RunLast();
