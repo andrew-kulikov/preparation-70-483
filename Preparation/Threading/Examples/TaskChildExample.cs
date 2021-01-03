@@ -8,6 +8,7 @@ namespace Threading.Examples
     /// <summary>
     ///     Be aware of passing async tasks to factory, because in this case parent wll not wait
     ///     https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/attached-and-detached-child-tasks
+    ///     By default all tasks are created with TaskCreationOptions.DenyChildAttach
     /// </summary>
     public class TaskChildExample : Example
     {
