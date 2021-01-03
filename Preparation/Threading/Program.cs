@@ -30,6 +30,7 @@ namespace Threading
                 .WithExample(new AsyncExceptionExample())
                 .WithExample(new BlockingCollectionExample())
                 .WithExample(new BlockingStackExample())
+                .WithExample(new ConcurrentStackExample())
                 ;
 
             exampleSet.RunLast();
