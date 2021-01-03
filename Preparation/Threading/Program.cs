@@ -26,6 +26,7 @@ namespace Threading
                 .WithExample(new ThreadExample())
                 .WithExample(new ThreadAbortExample())
                 .WithExample(new ThreadLocalAndStaticExample())
+                .WithExample(new ThreadPoolExample())
                 ;
 
             exampleSet.RunLast();
