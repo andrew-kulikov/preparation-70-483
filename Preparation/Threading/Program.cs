@@ -23,6 +23,7 @@ namespace Threading
                 .WithExample(new TasksExample())
                 .WithExample(new TasksContinuationExample())
                 .WithExample(new TaskChildExample())
+                .WithExample(new ThreadExample())
                 ;
 
             exampleSet.RunLast();
