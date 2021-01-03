@@ -31,6 +31,7 @@ namespace Threading
                 .WithExample(new BlockingCollectionExample())
                 .WithExample(new BlockingStackExample())
                 .WithExample(new ConcurrentStackExample())
+                .WithExample(new ConcurrentDictionaryExample())
                 ;
 
             exampleSet.RunLast();
