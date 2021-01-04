@@ -13,7 +13,7 @@ namespace ThreadingManagement.Examples
     /// </summary>
     public class RaceConditionExample : Example
     {
-        private const int N = 500000000;
+        private const int N = 50000000;
         private static long _sharedTotal;
         private static readonly object _locker = new object();
 
@@ -31,6 +31,16 @@ namespace ThreadingManagement.Examples
             for (var i = start; i < end; i++) Interlocked.Add(ref _sharedTotal, i);
         }
 
+        private static void AddWithSmartInterlocked(int start, int end)
+        {
+            var subtotal = 0L;
+
+            for (var i = start; i < end; i++)
+                subtotal += i;
+
+            Interlocked.Add(ref _sharedTotal, subtotal);
+        }
+
         private static void AddWithLock(int start, int end)
         {
             for (var i = start; i < end; i++)
@@ -38,8 +48,19 @@ namespace ThreadingManagement.Examples
                 {
                     _sharedTotal += i;
                 }
+        }
 
-            ;
+        private static void AddWithSmartLock(int start, int end)
+        {
+            var subtotal = 0L;
+
+            for (var i = start; i < end; i++)
+                subtotal += i;
+
+            lock (_locker)
+            {
+                _sharedTotal += subtotal;
+            }
         }
 
         public override void Execute()
@@ -63,6 +84,21 @@ namespace ThreadingManagement.Examples
                 _sharedTotal = 0;
                 Calculate(AddWithLock);
                 Console.WriteLine($"Result with lock: {_sharedTotal}");
+            });
+
+
+            Measure(() =>
+            {
+                _sharedTotal = 0;
+                Calculate(AddWithSmartLock);
+                Console.WriteLine($"Result with smart lock: {_sharedTotal}");
+            });
+
+            Measure(() =>
+            {
+                _sharedTotal = 0;
+                Calculate(AddWithSmartInterlocked);
+                Console.WriteLine($"Result with smart interlocked: {_sharedTotal}");
             });
         }
 
