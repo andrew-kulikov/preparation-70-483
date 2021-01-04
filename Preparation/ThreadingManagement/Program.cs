@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using System;
+using Common;
 using ThreadingManagement.Examples;
 
 namespace ThreadingManagement
@@ -9,9 +10,12 @@ namespace ThreadingManagement
         {
             var exampleSet = new ExampleSet()
                     .WithExample(new RaceConditionExample())
+                    .WithExample(new MonitorExample())
                 ;
 
             exampleSet.RunLast();
+
+            Console.ReadLine();
         }
     }
 }
