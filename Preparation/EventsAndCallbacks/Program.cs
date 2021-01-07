@@ -10,6 +10,7 @@ namespace EventsAndCallbacks
         {
             var exampleSet = new ExampleSet()
                     .WithExample(new DelegateSubscriptionExample())
+                    .WithExample(new EventsErrorsExample())
                 ;
 
             exampleSet.RunLast();
