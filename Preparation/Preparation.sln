@@ -5,13 +5,17 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threading", "Threading\Threading.csproj", "{DF608407-5FDB-4F63-BA9C-08141843E69F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{51C1FB5B-7CB0-496A-A837-3A74693AA3F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{51C1FB5B-7CB0-496A-A837-3A74693AA3F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Manage program flow", "1. Manage program flow", "{9DBC8B20-2CBB-427B-9AD5-738EFD463365}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingManagement", "ThreadingManagement\ThreadingManagement.csproj", "{AC4EA30B-5303-4340-A285-87CAD5848B0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadingManagement", "ThreadingManagement\ThreadingManagement.csproj", "{AC4EA30B-5303-4340-A285-87CAD5848B0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsAndCallbacks", "EventsAndCallbacks\EventsAndCallbacks.csproj", "{D9A39D7A-40F4-4074-8939-D570F8CD4A6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsAndCallbacks", "EventsAndCallbacks\EventsAndCallbacks.csproj", "{D9A39D7A-40F4-4074-8939-D570F8CD4A6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Create and Use Types", "2. Create and Use Types", "{0ADBB785-6125-4370-81A7-460EBF152FA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Types", "Types\Types.csproj", "{34691524-E461-414A-B92F-06012B4DCE1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{D9A39D7A-40F4-4074-8939-D570F8CD4A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A39D7A-40F4-4074-8939-D570F8CD4A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9A39D7A-40F4-4074-8939-D570F8CD4A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34691524-E461-414A-B92F-06012B4DCE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34691524-E461-414A-B92F-06012B4DCE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34691524-E461-414A-B92F-06012B4DCE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34691524-E461-414A-B92F-06012B4DCE1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +51,7 @@ Global
 		{DF608407-5FDB-4F63-BA9C-08141843E69F} = {9DBC8B20-2CBB-427B-9AD5-738EFD463365}
 		{AC4EA30B-5303-4340-A285-87CAD5848B0B} = {9DBC8B20-2CBB-427B-9AD5-738EFD463365}
 		{D9A39D7A-40F4-4074-8939-D570F8CD4A6B} = {9DBC8B20-2CBB-427B-9AD5-738EFD463365}
+		{34691524-E461-414A-B92F-06012B4DCE1F} = {0ADBB785-6125-4370-81A7-460EBF152FA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {902F0788-4100-473F-A943-923A9C2FD7CA}
