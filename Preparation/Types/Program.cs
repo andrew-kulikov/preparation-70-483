@@ -10,6 +10,7 @@ namespace Types
         {
             var examples = new ExampleSet()
                     .WithExample(new CodeDomExample())
+                    .WithExample(new ConditionalExample())
                 ;
 
             examples.RunLast();
