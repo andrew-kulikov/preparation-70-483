@@ -12,6 +12,7 @@ namespace Types
                     .WithExample(new CodeDomExample())
                     .WithExample(new ConditionalExample())
                     .WithExample(new GCExample())
+                    .WithExample(new StringReaderWriterExample())
                 ;
 
             examples.RunLast();
