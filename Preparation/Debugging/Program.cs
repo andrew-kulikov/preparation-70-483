@@ -12,6 +12,7 @@ namespace Debugging
                     .WithExample(new JsonExample())
                     .WithExample(new RegexExample())
                     .WithExample(new RegexCompilationExample())
+                    .WithExample(new ValidationExample())
                 ;
 
             examples.RunLast();
