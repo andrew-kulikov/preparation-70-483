@@ -15,6 +15,7 @@ namespace Debugging
                     .WithExample(new ValidationExample())
                     .WithExample(new TraceExample())
                     .WithExample(new TraceSourceExample())
+                    .WithExample(new CounterReadExample())
                 ;
 
             examples.RunLast();

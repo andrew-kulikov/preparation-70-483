@@ -1,13 +1,11 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
+﻿using System.Diagnostics;
 using Common;
 
 namespace Debugging.Examples
 {
     public class TraceSourceExample : Example
     {
-        private TraceSource _source;
+        private readonly TraceSource _source;
 
         public TraceSourceExample() : base("Tracing source example", "3.1")
         {
@@ -24,7 +22,7 @@ namespace Debugging.Examples
             _source.TraceEvent(TraceEventType.Start, 1000);
             _source.TraceEvent(TraceEventType.Warning, 1001);
             _source.TraceEvent(TraceEventType.Verbose, 1002, "verbose");
-            _source.TraceData(TraceEventType.Information, 1003, new object[] { "Note 1", "Message 2" });
+            _source.TraceData(TraceEventType.Information, 1003, "Note 1", "Message 2");
 
             Foo();
         }
