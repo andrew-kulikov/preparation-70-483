@@ -13,6 +13,8 @@ namespace Debugging
                     .WithExample(new RegexExample())
                     .WithExample(new RegexCompilationExample())
                     .WithExample(new ValidationExample())
+                    .WithExample(new TraceExample())
+                    .WithExample(new TraceSourceExample())
                 ;
 
             examples.RunLast();
