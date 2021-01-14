@@ -10,6 +10,8 @@ namespace Debugging
         {
             var examples = new ExampleSet()
                     .WithExample(new JsonExample())
+                    .WithExample(new RegexExample())
+                    .WithExample(new RegexCompilationExample())
                 ;
 
             examples.RunLast();
