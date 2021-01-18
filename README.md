@@ -20,7 +20,7 @@ All themes that should be covered according to official Microsoft exam specifica
   1.5. Implement exception handling  
     Handle exception types, including SQL exceptions, network exceptions, communication exceptions,
     network timeout exceptions; use catch statements; use base class of an exception; implement try-catchfinally blocks; throw exceptions; rethrow an exception; create custom exceptions; handle inner exceptions; handle aggregate exceptions
-2. Create and Use Types (25-30%)  
+2. ✅ Create and Use Types (25-30%)  
   2.1. Create types  
     Create value types, including structs and enum; create reference types, generic types, constructors, static
     variables, methods, classes, extension methods; create optional and named parameters; create indexed
@@ -43,7 +43,7 @@ All themes that should be covered according to official Microsoft exam specifica
   2.7. Manipulate strings  
     Manipulate strings by using the StringBuilder, StringWriter, and StringReader classes; search strings;
     enumerate string methods; format strings; use string interpolation    
-3. Debug Applications and Implement Security (25-30%)  
+3. ✅ Debug Applications and Implement Security (25-30%)  
   3.1. Validate application input  
     Validate JSON data; choose the appropriate data collection type; manage data integrity; evaluate a regular
     expression to validate the input format; use built-in functions to validate data type and content   
@@ -59,7 +59,7 @@ All themes that should be covered according to official Microsoft exam specifica
   3.5. Implement diagnostics in an application  
     Implement logging and tracing; profiling applications; create and monitor performance counters; write to
     the event log  
-4. Implement Data Access (25-30%)  
+4. ✅ Implement Data Access (25-30%)  
   4.1. Perform I/O operations  
     Read and write files and streams; read and write from the network by using classes in the System.Net
     namespace; implement asynchronous I/O operations  
